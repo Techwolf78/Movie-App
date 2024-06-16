@@ -15,12 +15,21 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://movie-app-backend-production-c5dd.up.railway.app/api/v1/auth/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://movie-app-backend-production-c5dd.up.railway.app/api/v1/auth/login",
+        {
+          email,
+          password,
+        },
+        {
+          withCredentials: true, // Include credentials if needed
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (res && res.data.success) {
-        toast.success(res.data && res.data.message);
+        toast.success(res.data.message);
         setAuth({
           ...auth,
           user: res.data.user,
