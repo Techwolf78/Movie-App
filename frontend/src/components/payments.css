@@ -1,0 +1,50 @@
+.payment-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.payment-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.payment-container ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.payment-container ul li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 600px) {
+  .payment-container {
+    padding: 10px;
+  }
+
+  .payment-container ul li {
+    font-size: 14px;
+  }
+}
+
+/* Ensure consistency for button styles */
+.pay-button,
+.submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+}
+
+

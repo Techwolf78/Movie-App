@@ -1,0 +1,134 @@
+.seat-selection {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.screen-selection {
+  margin-bottom: 20px;
+}
+
+.screen-selection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.screen-selection li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.screen-selection button {
+  background-color: #3498db; /* Blue color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* Add a rounded corner */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.screen-selection button:hover {
+  background-color: #2ecc71; /* Green color on hover */
+}
+
+.seat-map-container {
+  margin-bottom: 20px;
+}
+
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.seat {
+  background-color: #ccc;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.seat:hover {
+  background-color: #2980b9; 
+  color: #fff; 
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+.seat.available {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.seat.selected {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.selected-seats {
+  margin-bottom: 20px;
+}
+
+.selected-seats ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.selected-seats li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
+.price-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.price-button {
+  background-color: #3498db; /* Blue color */
+  color: #fff; /* White text color */
+  border: none;
+  max-width: 100px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px; /* Add a rounded corner */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  transition: all 0.3s ease; /* Add a transition effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.price-button:hover {
+  background-color: #2ecc71; /* Green color on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a stronger shadow effect on hover */
+}
+
+.price-button:hover::before {
+  transform: scale(1); /* Enlarge the background on hover */
+}
+
+.price-button:active::before {
+  transform: scale(0.9); /* Slightly shrink the background on active state */
+}
