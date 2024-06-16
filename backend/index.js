@@ -11,10 +11,8 @@ dotenv.config();
 
 connectDB();
 
-// Initialize Stripe with your secret key
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
-// Nodemailer transporter setup (use your own email service)
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -25,10 +23,8 @@ const transporter = nodemailer.createTransport({
 
 const app = express();
 
-// Middleware to handle JSON requests
 app.use(express.json());
 
-// CORS Configuration
 app.use(
   cors({
     origin: ["http://localhost:3000", "https://movie-booking-tech.vercel.app"],
@@ -37,10 +33,8 @@ app.use(
   })
 );
 
-// Define routes
 app.use("/api/v1/auth", userRoutes);
 
-// Endpoint to create payment intent
 app.post("/create-payment-intent", async (req, res) => {
   const { amount } = req.body;
   try {
@@ -57,7 +51,6 @@ app.post("/create-payment-intent", async (req, res) => {
   }
 });
 
-// Endpoint for confirming booking
 app.post("/confirm-booking", async (req, res) => {
   const { email, bookingDetails } = req.body;
 
@@ -78,12 +71,8 @@ app.post("/confirm-booking", async (req, res) => {
   }
 
   try {
-    // Perform booking confirmation logic here
-
-    // Send confirmation email
     await sendConfirmationEmail(email, bookingDetails);
 
-    // Respond to client
     res.status(200).send({ message: "Booking confirmed and email sent" });
   } catch (error) {
     console.error("Error confirming booking:", error);
@@ -91,7 +80,6 @@ app.post("/confirm-booking", async (req, res) => {
   }
 });
 
-// Define the sendConfirmationEmail function
 async function sendConfirmationEmail(email, bookingDetails) {
   if (
     !bookingDetails ||
@@ -117,7 +105,6 @@ async function sendConfirmationEmail(email, bookingDetails) {
         Total Price: ₹${bookingDetails.totalPrice}`,
     };
 
-    // Send the email
     await transporter.sendMail(mailOptions);
     console.log("Confirmation email sent successfully");
   } catch (error) {
@@ -125,13 +112,10 @@ async function sendConfirmationEmail(email, bookingDetails) {
   }
 }
 
-// Serve static files
 app.use(express.static(path.join(process.cwd(), "client", "build")));
 
-// Define PORT
 const PORT = process.env.PORT || 8080;
 
-// Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

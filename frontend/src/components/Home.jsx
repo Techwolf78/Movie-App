@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Home.css';
+import './css/Home.css';
 
 
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <div>
-      <button onClick={handleLogout} className="logout-button btn btn-primary float-right">Logout</button>
+      <button onClick={handleLogout} className="logout-button">Logout</button>
       <h2>Welcome to the Online Movie Booking !</h2>
 <p>Here you can find a list of movies that you can watch. You can browse through the movies by clicking on <b>Go to Movie Selection</b> <i>button</i></p>
 <h3>Movie Selection</h3>
@@ -46,17 +46,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <button onClick={() => navigate('/movies')} style={{
-  backgroundColor: '#F7DC6F', // Light yellow
-  color: 'black',
-  fontSize: '20px',
-  padding: '10px 20px',
-  border: 'none',
-  borderRadius: '5px',
-  cursor: 'pointer',
-  display: 'block', // Center the button
-  margin: '0 auto'
-}}>Go to Movie Selection</button>
+      <button className="go-movie" onClick={() => navigate('/movies')}>Go to Movie Selection</button>
     </div>
   );
 };

@@ -3,9 +3,9 @@ import { BookingContext } from '../context/BookingContext.js';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useNavigate } from 'react-router-dom';
-import "./payments.css";
+import "./css/payments.css";
 
-// Load Stripe with your public key
+
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 const Payment = () => {
@@ -14,13 +14,13 @@ const Payment = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch the client secret from the backend
+
     fetch(`${process.env.REACT_APP_BACKEND_URL}/create-payment-intent`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ amount: bookingDetails.totalPrice * 100 }), // Amount in cents
+      body: JSON.stringify({ amount: bookingDetails.totalPrice * 100 }), 
     })
     .then(response => response.json())
     .then(data => {
@@ -37,21 +37,21 @@ const Payment = () => {
 
   const handleBookingConfirmation = async (details) => {
     try {
-      // Send booking confirmation request
+
       await fetch(`${process.env.REACT_APP_BACKEND_URL}/confirm-booking`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email: details.email, // Use email from payment form
+          email: details.email, 
           bookingDetails: {
             ...details.bookingDetails,
           },
         }),
       });
 
-      // Navigate to confirmation page
+
       navigate('/Confirmation', { state: { bookingDetails } });
     } catch (error) {
       console.error('Error sending booking confirmation:', error);
@@ -61,7 +61,7 @@ const Payment = () => {
   return (
     <div className="payment-container">
       <h2>Payment Details</h2>
-      <ul className="no-bullets"> {/* Apply the CSS class to remove bullets */}
+      <ul className="no-bullets"> 
         <li><strong>Movie Name:</strong> {bookingDetails.selectedMovie}</li>
         <li><strong>Screen Name:</strong> {bookingDetails.selectedScreen}</li>
         <li><strong>Showtime:</strong> {bookingDetails.selectedShowtime}</li>

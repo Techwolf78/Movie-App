@@ -1,9 +1,7 @@
 import React, { createContext, useState } from "react";
 
-// Create a Context
 export const BookingContext = createContext();
 
-// Create a Provider component
 export const BookingProvider = ({ children }) => {
   const [bookingDetails, setBookingDetails] = useState({
     selectedMovie: null,

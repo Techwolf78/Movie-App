@@ -1,17 +1,15 @@
 import React, { useContext, useEffect } from 'react';
 import { BookingContext } from '../context/BookingContext.js';
-import "./Confirmation.css";
+import "./css/Confirmation.css";
 
 const Confirmation = () => {
   const { bookingDetails } = useContext(BookingContext);
 
   useEffect(() => {
-    // Timeout to automatically navigate away after 3 seconds
+
     const timer = setTimeout(() => {
-      // Replace with your desired navigation logic
-      // Example: history.push('/home');
       console.log('Redirecting...');
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { BookingContext } from '../context/BookingContext.js';
-import "./MovieSelection.css";
+import "./css/MovieSelection.css";
 
 const movies = [
   {
@@ -46,7 +46,7 @@ const MovieSelection = () => {
       selectedMovie: movie.title,
       selectedShowtime: showtime,
     }));
-    navigate("/SeatSelection"); // Navigate to SeatSelection page
+    navigate("/SeatSelection"); 
   };
 
   return (

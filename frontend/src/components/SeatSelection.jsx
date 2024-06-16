@@ -1,7 +1,7 @@
 import React, { useState, useContext ,useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { BookingContext } from '../context/BookingContext.js';
-import "./SeatSelection.css";
+import "./css/SeatSelection.css";
 
 const screens = [
   {
