@@ -21,7 +21,7 @@ This project is a comprehensive movie booking system developed as part of the Se
   - Capacity enforcement
 
 - **Payment Gateway**:
-  - Used Stripe to add integrate safe payment
+  - Used  <a href="https://stripe.com/in" target="_blank">Stripe</a> to add integrate safe payment
     
 - **Notifications**:
   - Booking confirmations via email
