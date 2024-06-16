@@ -30,8 +30,9 @@ This project is a comprehensive movie booking system developed as part of the Se
 
 ## Deployment
 
-- **Frontend**: Deployed on <a href="https://movie-app-self-five.vercel.app/home" target="_blank">Vercel</a>
-- **Backend**: Deployed on <a href="https://movie-app-backend-1-xpdl.onrender.com/" target="_blank">Render</a>
+- **Frontend**: Deployed on [Vercel](https://movie-app-self-five.vercel.app/home){:target="_blank"}
+- **Backend**: Deployed on [Render](https://movie-app-backend-1-xpdl.onrender.com/){:target="_blank"}
+
 
 
 
