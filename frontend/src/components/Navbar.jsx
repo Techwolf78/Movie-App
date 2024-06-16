@@ -7,10 +7,10 @@ const Navbar = () => {
       <div className="navbar-brand">
         <Link to="/" style={{
           fontSize: '30px',
-          '@media (max-width: 768px)': {
+          '@media (maxWidth: 768px)': {
             fontSize: '25px',
           },
-          '@media (max-width: 480px)': {
+          '@media (maxWidth: 480px)': {
             fontSize: '20px',
           },
         }}>
@@ -21,10 +21,10 @@ const Navbar = () => {
         <li className="nav-item">
           <Link to="/movies" style={{
             fontSize: '18px',
-            '@media (max-width: 768px)': {
+            '@media (maxWidth: 768px)': {
               fontSize: '16px',
             },
-            '@media (max-width: 480px)': {
+            '@media (maxWidth: 480px)': {
               fontSize: '14px',
             },
           }}>
@@ -34,10 +34,10 @@ const Navbar = () => {
         <li className="nav-item">
           <Link to="/about" style={{
             fontSize: '18px',
-            '@media (max-width: 768px)': {
+            '@media (maxWidth: 768px)': {
               fontSize: '16px',
             },
-            '@media (max-width: 480px)': {
+            '@media (maxWidth: 480px)': {
               fontSize: '14px',
             },
           }}>
@@ -47,10 +47,10 @@ const Navbar = () => {
         <li className="nav-item">
           <Link to="/contact" style={{
             fontSize: '18px',
-            '@media (max-width: 768px)': {
+            '@media (maxWidth: 768px)': {
               fontSize: '16px',
             },
-            '@media (max-width: 480px)': {
+            '@media (maxWidth: 480px)': {
               fontSize: '14px',
             },
           }}>
