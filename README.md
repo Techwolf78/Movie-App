@@ -4,7 +4,7 @@
 
 This project is a comprehensive movie booking system developed as part of the SecurityBoat Assessment Test for the position of Associate Software Developer. The system includes user registration and login, movie selection, seat booking, and an optional food ordering feature. It also features an admin panel for managing screens and bookings, and it ensures security through user authentication and data encryption.
 
-## Features i could add
+## Features I could ADD
 
 - **User Management**:
   - Registration and login
