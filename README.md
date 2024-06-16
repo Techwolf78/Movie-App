@@ -4,7 +4,7 @@
 
 This project is a comprehensive movie booking system developed as part of the SecurityBoat Assessment Test for the position of Associate Software Developer. The system includes user registration and login, movie selection, seat booking. It also sends the confirmation email after a successful payment and it ensures security through user authentication and data encryption.
 
-[![Demo Video](https://i.vimeocdn.com/video/959826468.jpg)](https://vimeo.com/959826468)
+[![Demo Video]](https://vimeo.com/959826468)
 
 ## Issues
 
